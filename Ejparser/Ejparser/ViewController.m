@@ -9,15 +9,22 @@
 #import "ViewController.h"
 
 @interface ViewController ()
-
 @end
 
+
 @implementation ViewController
+
+@synthesize infoText;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-}
+    CGRect frame = CGRectMake(100, 100, 100, 50);
+    
+    UILabel *wd = [[UILabel alloc] initWithFrame:frame];
+    wd.text = self.infoText;
+    [self.view addSubview:wd];
+    }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

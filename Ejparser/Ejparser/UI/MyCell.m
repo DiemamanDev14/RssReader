@@ -8,8 +8,11 @@
 
 #import "MyCell.h"
 
+
+
 @implementation MyCell
 
+@synthesize myLabel;
 - (void)awakeFromNib {
     // Initialization code
 }

@@ -8,8 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController {
+@private
+    __weak IBOutlet UILabel *detailViewLabel;
 
+}
+
+@property (nonatomic, copy) NSString *infoText;
 
 @end
 

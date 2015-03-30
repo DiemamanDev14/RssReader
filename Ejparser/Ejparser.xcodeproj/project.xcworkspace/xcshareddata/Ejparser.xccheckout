@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>54074E73-9A79-45B8-9436-1F990DC64544</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Ejparser</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>3F255334257304BBC018DC07BEADBA8B7B516182</key>
+		<string>https://github.com/DiemamanDev14/RssReader.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Ejparser/Ejparser.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>3F255334257304BBC018DC07BEADBA8B7B516182</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/DiemamanDev14/RssReader.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>3F255334257304BBC018DC07BEADBA8B7B516182</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>3F255334257304BBC018DC07BEADBA8B7B516182</string>
+			<key>IDESourceControlWCCName</key>
+			<string>RssReader</string>
+		</dict>
+	</array>
+</dict>
+</plist>
