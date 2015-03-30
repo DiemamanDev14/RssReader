@@ -13,6 +13,7 @@
 @interface MystudioTableViewController (){
 
     NSMutableArray *myArray;
+    MyCell *myCell;
 }
 
 @end
@@ -60,7 +61,7 @@
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    MyCell *myCell = [tableView dequeueReusableCellWithIdentifier:@"myCell" forIndexPath:indexPath];
+    myCell = [tableView dequeueReusableCellWithIdentifier:@"myCell" forIndexPath:indexPath];
     
         myCell.myLabel.text = [NSString stringWithFormat:@"%@", [myArray objectAtIndex:indexPath.row]];
   
@@ -85,11 +86,13 @@
          [myArray removeObjectAtIndex:indexPath.row];
         
         [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+        
+//         [tableView reloadData];
     } else if (editingStyle == UITableViewCellEditingStyleInsert) {
         
         // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
     }   
-    //[tableView reloadData];
+   
 
 }
 
@@ -114,10 +117,10 @@
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     ViewController *detailView = [segue destinationViewController];
-    MyCell *cell = sender;
+    myCell = sender;
     // Pass the selected object to the new view controller.
     
- detailView.infoText = [NSString stringWithFormat:@"%ld", [self.tableView indexPathForCell:cell].row];
+    detailView.infoText = myCell.myLabel.text;//[NSString stringWithFormat:@"%ld", [self.tableView indexPathForCell:myCell].row];
     
     NSLog(@"%@", detailView.infoText);
 }
