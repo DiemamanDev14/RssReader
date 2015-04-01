@@ -24,7 +24,19 @@
     UILabel *wd = [[UILabel alloc] initWithFrame:frame];
     wd.text = self.infoText;
     [self.view addSubview:wd];
-    }
+    
+    //    UIImageView *dot =[[UIImageView alloc] initWithFrame:CGRectMake(50,150,20,20)];
+    //    dot.image=[UIImage imageNamed:@"apple_ex.png"];
+    //    [self.view addSubview:dot];
+    UIImageView *imgView = [[UIImageView alloc] initWithFrame:CGRectMake(100, 100, 20, 20)];
+    imgView.image = [UIImage imageNamed:@"apple_ex.png"];
+    [self.view addSubview:imgView];
+    
+    
+    
+    
+    
+}
 
 
 - (void)didReceiveMemoryWarning {

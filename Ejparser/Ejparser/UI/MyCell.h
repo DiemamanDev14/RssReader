@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface MyCell : UITableViewCell {
-//    __weak IBOutlet UILabel *myLabel;
+
 }
 
 @property (weak, nonatomic) IBOutlet UILabel *myLabel;

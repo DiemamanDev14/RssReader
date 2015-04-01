@@ -8,7 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MystudioTableViewController : UITableViewController
+@interface MystudioTableViewController : UITableViewController  <UITableViewDelegate,UITableViewDataSource> {
+    NSArray *imageData;
+}
+
+
+
+@property(nonatomic, retain) NSArray *imageData;
 
 
 

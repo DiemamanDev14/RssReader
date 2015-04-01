@@ -9,26 +9,44 @@
 #import "MystudioTableViewController.h"
 #import "ViewController.h"
 #import "MyCell.h"
+#import "ImageViewForCell.h"
+
 
 @interface MystudioTableViewController (){
 
     NSMutableArray *myArray;
     MyCell *myCell;
+    ImageViewForCell *imageInCell;
+    CGRect rectImage;
 }
 
 @end
 
 @implementation MystudioTableViewController
 
+@synthesize imageData;
 
 - (void)viewDidLoad {
-    [super viewDidLoad];
+        [super viewDidLoad];
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    
+    
+//    NSMutableArray *imagesArray = [[NSMutableArray alloc] init];
+//    for(int i = 0; i < [image count]; i++)
+//    {
+//        NSData *imageData= [[NSData alloc] initWithContentsOfURL:[NSURL URLWithString:[image objectAtIndex:i]]];
+//        [imagesArray addObject:[UIImage imageWithData:imageData]];
+//    }
+    
+    
+    
+    
     
     myArray = [[NSMutableArray alloc] init];
     
@@ -38,7 +56,31 @@
     
 }
 
-
+//- (void)loadImagesFromPaths:(NSArray *)paths
+//{
+//    for (NSUInteger index=0;index<paths.count;index++)
+//    {
+//        NSString *path = paths[index];
+//        NSURL *url = [NSURL URLWithString:path];
+//        if (!url) // check url initialized
+//            continue;
+//        // load image data asynchronously in a separate queue with a low priority
+//        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_LOW, 0), ^{
+//            NSData *imageData = [NSData dataWithContentsOfURL:url];
+//            if (!imageData)
+//                return; // if no data - return from block
+//            UIImage *image = [UIImage imageWithData:imageData];
+//            if (!image)
+//                return; // if no image provided by url - do nothing
+//            if (index==0)
+//                [self.imageView0 setImage:image];
+//            else if (index==1)
+//                [self.imageView1 setImage:image];
+//            else  //.. etc
+//                });
+//    }
+//}
+//
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -62,9 +104,25 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     myCell = [tableView dequeueReusableCellWithIdentifier:@"myCell" forIndexPath:indexPath];
+    myCell.myLabel.text = [NSString stringWithFormat:@"%@", [myArray objectAtIndex:indexPath.row]];
     
-        myCell.myLabel.text = [NSString stringWithFormat:@"%@", [myArray objectAtIndex:indexPath.row]];
-  
+//    NSString *imageUrlString = @"http://upload.wikimedia.org/wikipedia/commons/9/91/Adium.png";
+//    NSURL *url = [NSURL URLWithString:imageUrlString];
+    
+//    UIImage *img = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:@"http://upload.wikimedia.org/wikipedia/commons/9/91/Adium.png"]]];
+//    
+
+    
+    
+    UIImageView *imgView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 20, 20)];
+    imgView.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:@"http://upload.wikimedia.org/wikipedia/commons/9/91/Adium.png"]]];
+    myCell.imageView.image = imgView.image;
+    
+    
+    
+    //    rectImage = CGRectMake(10, 10, 20, 5);
+    //
+    //    myCell.viewForBaselineLayout = [imageInCell drawRect:rectImage];
     return myCell;
 }
 

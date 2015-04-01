@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		841A95201ACC6DD100C8D68A /* ImageViewForCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 841A951F1ACC6DD100C8D68A /* ImageViewForCell.m */; };
+		841A95221ACC728200C8D68A /* apple_ex.png in Resources */ = {isa = PBXBuildFile; fileRef = 841A95211ACC728200C8D68A /* apple_ex.png */; };
 		844899001AC925EF009B62EB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 844898FF1AC925EF009B62EB /* main.m */; };
 		844899031AC925EF009B62EB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 844899021AC925EF009B62EB /* AppDelegate.m */; };
 		844899061AC925EF009B62EB /* Ejparser.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 844899041AC925EF009B62EB /* Ejparser.xcdatamodeld */; };
@@ -30,6 +32,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		841A951E1ACC6DD100C8D68A /* ImageViewForCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ImageViewForCell.h; path = UI/ImageViewForCell.h; sourceTree = "<group>"; };
+		841A951F1ACC6DD100C8D68A /* ImageViewForCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ImageViewForCell.m; path = UI/ImageViewForCell.m; sourceTree = "<group>"; };
+		841A95211ACC728200C8D68A /* apple_ex.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = apple_ex.png; sourceTree = "<group>"; };
 		844898FA1AC925EF009B62EB /* Ejparser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ejparser.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		844898FE1AC925EF009B62EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		844898FF1AC925EF009B62EB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -106,6 +111,7 @@
 		844898FD1AC925EF009B62EB /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				841A95211ACC728200C8D68A /* apple_ex.png */,
 				844898FE1AC925EF009B62EB /* Info.plist */,
 				844898FF1AC925EF009B62EB /* main.m */,
 			);
@@ -136,6 +142,8 @@
 				8448992B1AC93DBC009B62EB /* MyCell.m */,
 				844899261AC92C42009B62EB /* MystudioTableViewController.h */,
 				844899271AC92C42009B62EB /* MystudioTableViewController.m */,
+				841A951E1ACC6DD100C8D68A /* ImageViewForCell.h */,
+				841A951F1ACC6DD100C8D68A /* ImageViewForCell.m */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -221,6 +229,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8448990C1AC925EF009B62EB /* Main.storyboard in Resources */,
+				841A95221ACC728200C8D68A /* apple_ex.png in Resources */,
 				844899111AC925EF009B62EB /* LaunchScreen.xib in Resources */,
 				8448990E1AC925EF009B62EB /* Images.xcassets in Resources */,
 			);
@@ -243,6 +252,7 @@
 				844899031AC925EF009B62EB /* AppDelegate.m in Sources */,
 				844899061AC925EF009B62EB /* Ejparser.xcdatamodeld in Sources */,
 				844899091AC925EF009B62EB /* ViewController.m in Sources */,
+				841A95201ACC6DD100C8D68A /* ImageViewForCell.m in Sources */,
 				844899001AC925EF009B62EB /* main.m in Sources */,
 				844899281AC92C42009B62EB /* MystudioTableViewController.m in Sources */,
 				8448992C1AC93DBC009B62EB /* MyCell.m in Sources */,
@@ -438,6 +448,7 @@
 				844899221AC925EF009B62EB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		844899231AC925EF009B62EB /* Build configuration list for PBXNativeTarget "EjparserTests" */ = {
 			isa = XCConfigurationList;
@@ -446,6 +457,7 @@
 				844899251AC925EF009B62EB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
