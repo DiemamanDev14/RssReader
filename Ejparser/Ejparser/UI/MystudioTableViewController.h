@@ -12,7 +12,7 @@
     NSArray *imageData;
 }
 
-
+//-(void)getImage;
 
 @property(nonatomic, retain) NSArray *imageData;
 
