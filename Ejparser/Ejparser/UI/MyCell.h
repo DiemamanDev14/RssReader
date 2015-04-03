@@ -8,17 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-
-@interface MyCell : UITableViewCell   {
-
-    
+@interface MyCell : UITableViewCell {
 
 }
 
-@property (strong, nonatomic)  UILabel *myLabel;
-@property (strong, nonatomic) UIImageView *imageView;
+@property (weak, nonatomic) IBOutlet UILabel *myLabel;
 
-- (void)loadImagesFromUrl:(NSInteger )i;
-- (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier withIndexPath:(NSInteger )i;
-//- (NSString*)giveMeLabelText:(NSInteger)i;
 @end
