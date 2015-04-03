@@ -135,7 +135,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    NSLog(@"%@", [tableView cellForRowAtIndexPath:indexPath].);
+//    NSLog(@"%@", [tableView cellForRowAtIndexPath:indexPath].);
 //    [self showID:indexPath.row withLabel:myCell.myLabel.text];
     
 }

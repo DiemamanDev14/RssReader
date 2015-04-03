@@ -45,7 +45,7 @@ NSArray * arr;
             
             dispatch_sync(dispatch_get_main_queue(), ^{
                 imageView.image = [UIImage imageWithData:data];
-//                NSLog(@"Image ready!");
+                NSLog(@"Image ready!");
                 
             });
         });
@@ -55,9 +55,9 @@ NSArray * arr;
     return self;
 }
 
-- (NSString*)giveMeLabelText:(NSInteger)i {
-    return my
-}
+//- (NSString*)giveMeLabelText:(NSInteger)i {
+//    return my
+//}
 
 - (void)loadImagesFromUrl:(NSInteger )i
 {
