@@ -28,6 +28,7 @@ NSArray * arr;
         [myLabel setFont:[UIFont fontWithName:@"HelveticaNeue" size:18.0f]];
         [myLabel setTranslatesAutoresizingMaskIntoConstraints:NO];
         myLabel.text = [NSString stringWithFormat:@"Cell # %li", i];
+        NSLog(@" myLabel.text = %@",  myLabel.text);
         [self.contentView addSubview:myLabel];
         //        [myCell loadImagesFromUrl];
         imageView = [[UIImageView alloc] initWithFrame:CGRectMake(180, 0, 150, 30)];
@@ -38,26 +39,23 @@ NSArray * arr;
         //        [myImage setTranslatesAutoresizingMaskIntoConstraints:NO];
         imageView.backgroundColor = [UIColor blackColor];
         //
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT,0), ^{
-            
-            NSURL *myUrl = [NSURL URLWithString:@"http://milon-zoo.ru/1qwef.jpg"];
-            NSData *data =[NSData dataWithContentsOfURL:myUrl];
-            
-            dispatch_sync(dispatch_get_main_queue(), ^{
-                imageView.image = [UIImage imageWithData:data];
-//                NSLog(@"Image ready!");
-                
-            });
-        });
+//        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT,0), ^{
+//            
+//            NSURL *myUrl = [NSURL URLWithString:@"http://milon-zoo.ru/1qwef.jpg"];
+//            NSData *data =[NSData dataWithContentsOfURL:myUrl];
+//            
+//            dispatch_sync(dispatch_get_main_queue(), ^{
+//                imageView.image = [UIImage imageWithData:data];
+////                NSLog(@"Image ready!");
+//                
+//            });
+//        });
         [self.contentView addSubview:imageView];
     }
     
     return self;
 }
 
-- (NSString*)giveMeLabelText:(NSInteger)i {
-    return my
-}
 
 - (void)loadImagesFromUrl:(NSInteger )i
 {

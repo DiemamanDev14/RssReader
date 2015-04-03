@@ -20,5 +20,5 @@
 
 - (void)loadImagesFromUrl:(NSInteger )i;
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier withIndexPath:(NSInteger )i;
-- (NSString*)giveMeLabelText:(NSInteger)i;
+//- (NSString*)giveMeLabelText:(NSInteger)i;
 @end

@@ -74,7 +74,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     //#warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return [myArray count];
+    return 25;
 }
 
 
@@ -84,14 +84,15 @@
     static NSString *cellIdentifier = @"myCell";
     MyCell *myCell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     
-    if (myCell == nil) {
+//    if (myCell == nil) {
         myCell = [[MyCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier withIndexPath:indexPath.row];
-    }
-    
+//    }
+
 //    [myCell loadImagesFromUrl:indexPath.row] ;
 //    UIImageView *imgView = [[UIImageView alloc] initWithFrame:CGRectMake(180, 0, 150, 30)];
-//    imgView.image = [myCell loadImagesFromUrl:myArray];
+////    imgView.image = [myCell loadImagesFromUrl:indexPath.row];
 //    myCell.imageView.image = imgView.image;
+    NSLog(@"Cell # = %ld", indexPath.row);
     return myCell;
 }
 
@@ -121,24 +122,24 @@
     }   
    
 
-}
-- (void)showID:(NSInteger)i withLabel:(UILabel *)labelCell
-{
-    
-    NSLog(@"Cell # %li clicked!", i);
-    ViewController *detailView = [[ViewController alloc] init];
-    
-    detailView.infoText = [NSString stringWithFormat:@"%i", i];
-    [self showViewController:detailView sender:nil];
-    
-}
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    
-    NSLog(@"%@", [tableView cellForRowAtIndexPath:indexPath].);
-//    [self showID:indexPath.row withLabel:myCell.myLabel.text];
-    
-}
+//}
+//- (void)showID:(NSInteger)i withLabel:(UILabel *)labelCell
+//{
+//    
+//    NSLog(@"Cell # %li clicked!", i);
+//    ViewController *detailView = [[ViewController alloc] init];
+//    
+//    detailView.infoText = [NSString stringWithFormat:@"%i", i];
+//    [self showViewController:detailView sender:nil];
+//    
+//}
+//
+//- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+//    
+//    NSLog(@"%@", [tableView cellForRowAtIndexPath:indexPath]);
+////    [self showID:indexPath.row withLabel:myCell.myLabel.text];
+//    
+//}
 
 /*
 // Override to support rearranging the table view.
@@ -157,16 +158,16 @@
 
 #pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    ViewController *detailView = [segue destinationViewController];
-//    myCell = sender;
-    // Pass the selected object to the new view controller.
-    
-//    detailView.infoText = myCell.myLabel.text;//[NSString stringWithFormat:@"%ld", [self.tableView indexPathForCell:myCell].row];
-    
-    NSLog(@"%@", detailView.infoText);
+//// In a storyboard-based application, you will often want to do a little preparation before navigation
+//- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+//    ViewController *detailView = [segue destinationViewController];
+////    myCell = sender;
+//    // Pass the selected object to the new view controller.
+//    
+////    detailView.infoText = myCell.myLabel.text;//[NSString stringWithFormat:@"%ld", [self.tableView indexPathForCell:myCell].row];
+//    
+//    NSLog(@"%@", detailView.infoText);
+//}
+
 }
-
-
 @end
