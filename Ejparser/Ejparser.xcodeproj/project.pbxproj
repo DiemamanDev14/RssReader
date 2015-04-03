@@ -19,6 +19,7 @@
 		8448991D1AC925EF009B62EB /* EjparserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8448991C1AC925EF009B62EB /* EjparserTests.m */; };
 		844899281AC92C42009B62EB /* MystudioTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 844899271AC92C42009B62EB /* MystudioTableViewController.m */; };
 		8448992C1AC93DBC009B62EB /* MyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8448992B1AC93DBC009B62EB /* MyCell.m */; };
+		846932F11ACD4A4100EA02FF /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 846932F01ACD4A4100EA02FF /* TableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,8 @@
 		844899271AC92C42009B62EB /* MystudioTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MystudioTableViewController.m; path = UI/MystudioTableViewController.m; sourceTree = "<group>"; };
 		8448992A1AC93DBC009B62EB /* MyCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyCell.h; path = UI/MyCell.h; sourceTree = "<group>"; };
 		8448992B1AC93DBC009B62EB /* MyCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyCell.m; path = UI/MyCell.m; sourceTree = "<group>"; };
+		846932EF1ACD4A4100EA02FF /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
+		846932F01ACD4A4100EA02FF /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +79,8 @@
 		844898F11AC925EF009B62EB = {
 			isa = PBXGroup;
 			children = (
+				846932EF1ACD4A4100EA02FF /* TableViewController.h */,
+				846932F01ACD4A4100EA02FF /* TableViewController.m */,
 				844898FC1AC925EF009B62EB /* Ejparser */,
 				844899191AC925EF009B62EB /* EjparserTests */,
 				844898FB1AC925EF009B62EB /* Products */,
@@ -256,6 +261,7 @@
 				844899001AC925EF009B62EB /* main.m in Sources */,
 				844899281AC92C42009B62EB /* MystudioTableViewController.m in Sources */,
 				8448992C1AC93DBC009B62EB /* MyCell.m in Sources */,
+				846932F11ACD4A4100EA02FF /* TableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
