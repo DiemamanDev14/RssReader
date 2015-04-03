@@ -16,7 +16,7 @@
 // An empty implementation adversely affects performance during animation.
 - (void)drawRect:(CGRect)rect {
     // Drawing code
-    dot =[[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 20, 20)];
+    dot =[[UIImageView alloc] initWithFrame:CGRectMake(50,50,20,20)];
     dot.image=[UIImage imageNamed:@"apple_ex.png"];
         
 }

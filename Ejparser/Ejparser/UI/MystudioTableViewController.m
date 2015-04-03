@@ -15,10 +15,9 @@
 @interface MystudioTableViewController (){
 
     NSMutableArray *myArray;
-//    MyCell *myCell;
+    MyCell *myCell;
     ImageViewForCell *imageInCell;
     CGRect rectImage;
-
 }
 
 @end
@@ -35,7 +34,7 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    rectImage = CGRectMake(0, 0, 20, 20);
+    
     
     
 //    NSMutableArray *imagesArray = [[NSMutableArray alloc] init];
@@ -45,8 +44,8 @@
 //        [imagesArray addObject:[UIImage imageWithData:imageData]];
 //    }
     
-//    
-//   imagenURL=@"http://www.google.by/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=0CAcQjRw&url=http%3A%2F%2Ffr.wikipedia.org%2Fwiki%2FFichier%3AFirefox_Old_Logo.png&ei=5OscVaTsG5LoaIjJgbgF&bvm=bv.89744112,d.d2s&psig=AFQjCNHQTtpdYLqjThq9YQ8IHKPWcW4eTg&ust=1428045149886127";
+    
+    
     
     
     myArray = [[NSMutableArray alloc] init];
@@ -57,6 +56,31 @@
     
 }
 
+//- (void)loadImagesFromPaths:(NSArray *)paths
+//{
+//    for (NSUInteger index=0;index<paths.count;index++)
+//    {
+//        NSString *path = paths[index];
+//        NSURL *url = [NSURL URLWithString:path];
+//        if (!url) // check url initialized
+//            continue;
+//        // load image data asynchronously in a separate queue with a low priority
+//        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_LOW, 0), ^{
+//            NSData *imageData = [NSData dataWithContentsOfURL:url];
+//            if (!imageData)
+//                return; // if no data - return from block
+//            UIImage *image = [UIImage imageWithData:imageData];
+//            if (!image)
+//                return; // if no image provided by url - do nothing
+//            if (index==0)
+//                [self.imageView0 setImage:image];
+//            else if (index==1)
+//                [self.imageView1 setImage:image];
+//            else  //.. etc
+//                });
+//    }
+//}
+//
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -79,19 +103,26 @@
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    myCell = [tableView dequeueReusableCellWithIdentifier:@"myCell" forIndexPath:indexPath];
+    myCell.myLabel.text = [NSString stringWithFormat:@"%@", [myArray objectAtIndex:indexPath.row]];
+    
+//    NSString *imageUrlString = @"http://upload.wikimedia.org/wikipedia/commons/9/91/Adium.png";
+//    NSURL *url = [NSURL URLWithString:imageUrlString];
+    
+//    UIImage *img = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:@"http://upload.wikimedia.org/wikipedia/commons/9/91/Adium.png"]]];
+//    
+
     
     
-    static NSString *cellIdentifier = @"myCell";
-    MyCell *myCell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    UIImageView *imgView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 20, 20)];
+    imgView.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:@"http://upload.wikimedia.org/wikipedia/commons/9/91/Adium.png"]]];
+    myCell.imageView.image = imgView.image;
     
-    if (myCell == nil) {
-        myCell = [[MyCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier withIndexPath:indexPath.row];
-    }
     
-//    [myCell loadImagesFromUrl:indexPath.row] ;
-//    UIImageView *imgView = [[UIImageView alloc] initWithFrame:CGRectMake(180, 0, 150, 30)];
-//    imgView.image = [myCell loadImagesFromUrl:myArray];
-//    myCell.imageView.image = imgView.image;
+    
+    //    rectImage = CGRectMake(10, 10, 20, 5);
+    //
+    //    myCell.viewForBaselineLayout = [imageInCell drawRect:rectImage];
     return myCell;
 }
 
@@ -122,23 +153,7 @@
    
 
 }
-- (void)showID:(NSInteger)i withLabel:(UILabel *)labelCell
-{
-    
-    NSLog(@"Cell # %li clicked!", i);
-    ViewController *detailView = [[ViewController alloc] init];
-    
-    detailView.infoText = [NSString stringWithFormat:@"%i", i];
-    [self showViewController:detailView sender:nil];
-    
-}
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    
-//    NSLog(@"%@", [tableView cellForRowAtIndexPath:indexPath].);
-//    [self showID:indexPath.row withLabel:myCell.myLabel.text];
-    
-}
 
 /*
 // Override to support rearranging the table view.
@@ -160,10 +175,10 @@
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     ViewController *detailView = [segue destinationViewController];
-//    myCell = sender;
+    myCell = sender;
     // Pass the selected object to the new view controller.
     
-//    detailView.infoText = myCell.myLabel.text;//[NSString stringWithFormat:@"%ld", [self.tableView indexPathForCell:myCell].row];
+    detailView.infoText = myCell.myLabel.text;//[NSString stringWithFormat:@"%ld", [self.tableView indexPathForCell:myCell].row];
     
     NSLog(@"%@", detailView.infoText);
 }
